@@ -26,4 +26,19 @@ drawdot(draw,110,130)
 drawdot(draw,60,230)
 draw.pieslice((130,130,230,230),135,45,outline=black,width=3)
 
+draw.arc((10,250,110,350),180,290,fill="black",width=3)
+draw.chord((130,250,230,350),290,180,outline=black,width=3)
+
+draw.polygon((120,470,70,400,70,370,100,370,120,390,140,370,170,370,170,400),outline=black,width=3)
+draw.line((30,410,120,470,210,410),fill=black,width=3)
+
+# Absolutely hideous hack to get a width 3 regular polygon
+for i in [-1,0,1]:
+    for j in [-1,0,1]:
+        draw.regular_polygon((60+i,540+j,50),5,outline=black)
+        draw.regular_polygon((180+i,540+j,50),7,outline=black)
+
+draw.rounded_rectangle((10,610,230,710),radius=10,outline=black,width=3)
+
 img.show()
+img.save("output/one_with_everything.png","PNG")
