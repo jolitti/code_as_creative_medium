@@ -46,4 +46,5 @@ not a significantly different exercise than the Mondrian one. Decided to skip it
 
 **Objective**: Draw your initials with primitives
 
+Finding an interesting way to draw an "E" with primitives is challenging
 In progress
